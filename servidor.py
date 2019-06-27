@@ -30,7 +30,7 @@ class Send:
 
 
 # função esperar - Thread
-def esperar(tcp, send, host='', port=5000):
+def esperar(tcp, send, host='', port=7000):
     origem = (host, port)
     # cria um vinculo
     tcp.bind(origem)
@@ -40,7 +40,7 @@ def esperar(tcp, send, host='', port=5000):
     while True:
         # aceita um conexão
         con, cliente = tcp.accept()
-        #print('Cliente ', cliente, ' conectado!')
+        print('Cliente ', cliente, ' conectado!')
         # atribui a conexão ao manipulador
         send.con = con
 
